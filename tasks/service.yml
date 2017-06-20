@@ -14,7 +14,7 @@
   with_items: "{{rabbitmq_users_remove}}"
 
 - name: Ensure the vhosts is present
-  rabbitmq_vhost: name={{item}}
+  rabbitmq_vhost: name={{item}} node={{rabbitmq_vhosts_node}}
   with_items: "{{rabbitmq_vhosts}}"
 
 - name: Ensure the users is present

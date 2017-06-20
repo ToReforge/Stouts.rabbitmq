@@ -7,6 +7,8 @@ rabbitmq_plugins:                       # Ensure the plugins is installed
 
 rabbitmq_vhosts: []                     # Ensure the vhosts are exists
 
+rabbitmq_vhosts_node: rabbit@{{ansible_hostname}}
+
 rabbitmq_users:                         # Ensure the users added
 - user: "admin"
   password: "admin"
