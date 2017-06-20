@@ -12,7 +12,7 @@ rabbitmq_vhosts_node: rabbit@{{ansible_hostname}} # Name of the node to apply th
 rabbitmq_users:                         # Ensure the users added
 - user: "admin"
   password: "admin"
-  vhosts:
+  permissions:
     - vhost: /
       configure_priv: .*
       read_priv: .*

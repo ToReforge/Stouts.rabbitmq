@@ -17,7 +17,7 @@ rabbitmq_plugins:                       # Ensure the plugins is installed
 rabbitmq_users:                         # Ensure the users added
   - user: admin
     password: admin
-    vhosts:
+    permissions:
       - vhost: /
         configure_priv: .*
         read_priv: .*

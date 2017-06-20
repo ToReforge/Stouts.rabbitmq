@@ -21,7 +21,7 @@
   rabbitmq_user: >
       user={{item.user}}
       password={{item.password}}
-      permissions={{item.vhosts}}
+      permissions={{item.permissions}}
       tags={{item.tags|default('')}}
   with_items: "{{rabbitmq_users}}"
 
