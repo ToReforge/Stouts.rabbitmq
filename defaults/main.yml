@@ -12,10 +12,11 @@ rabbitmq_vhosts_node: rabbit@{{ansible_hostname}}
 rabbitmq_users:                         # Ensure the users added
 - user: "admin"
   password: "admin"
-  vhost: /
-  configure_priv: .*
-  read_priv: .*
-  write_priv: .*
+  vhosts:
+    - vhost: /
+      configure_priv: .*
+      read_priv: .*
+      write_priv: .*
   tags: administrator
 
 rabbitmq_users_remove:                  # Ensure the users removed
