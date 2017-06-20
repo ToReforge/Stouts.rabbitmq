@@ -17,13 +17,15 @@ rabbitmq_plugins:                       # Ensure the plugins is installed
 rabbitmq_users:                         # Ensure the users added
   - user: admin
     password: admin
-    vhost: /
-    configure_priv: .*
-    read_priv: .*
-    write_priv: .*
+    vhosts:
+      - vhost: /
+        configure_priv: .*
+        read_priv: .*
     tags: administrator
 
 rabbitmq_vhosts: []                     # Ensure the vhosts are exists
+
+rabbitmq_vhosts_node: rabbit@{{ansible_hostname}} # Name of the node to apply the vhosts
 
 rabbitmq_users_remove:                  # Ensure the users removed
   - guest
