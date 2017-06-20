@@ -21,6 +21,7 @@ rabbitmq_users:                         # Ensure the users added
       - vhost: /
         configure_priv: .*
         read_priv: .*
+        write_priv: .*
     tags: administrator
 
 rabbitmq_vhosts: []                     # Ensure the vhosts are exists
